@@ -1,6 +1,13 @@
 # IAMoviles-UII-Act-5-GridView-2-X-7
 
+Hola, ¿me podrías ayudar con un código en Flutter para una tarea? Necesito hacer un GridView de 2 columnas por 7 filas (14 productos en total) para una app de 'Farmacias Similares'.
 
+El estilo visual debe ser oscuro con detalles en neón (Cyan), algo así como un tema Dark Mode moderno. Para cada tarjeta del grid, necesito que se vea la imagen del producto en la parte de arriba, y abajo tres filas con información: un título (nombre del producto), un subtítulo y una fila de estrellitas de calificación. También me gustaría que cada cuadro sea llamativo y tenga un botoncito redondo de carrito de compras en una esquina.
+
+Las imágenes las tengo en GitHub, son estas 14 (importante que todas se vean del mismo tamaño):
+[Aquí pegas la lista de tus 14 links de GitHub]
+
+No necesito pestañas ni TabBar, solo el archivo main.dart con el Scaffold principal y el GridView que se vea limpio. ¿Me ayudas a armarlo?
 <img width="495" height="784" alt="image" src="https://github.com/user-attachments/assets/8076a78b-d503-4f70-b0f1-2305ccefffdf" />
 <img width="494" height="739" alt="image" src="https://github.com/user-attachments/assets/f47b973b-a1b5-4579-a32f-84f9d8e8a878" />
 <img width="492" height="750" alt="image" src="https://github.com/user-attachments/assets/768f704a-05ec-4123-8c8d-39674dc60fe6" />
