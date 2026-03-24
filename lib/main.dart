@@ -1,122 +1,132 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MiApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MiApp extends StatelessWidget {
+  const MiApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      debugShowCheckedModeBanner: false,
+      title: 'SIMILARES',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(0xFF1A1A1D),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1D1E33),
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            color: Colors.white, 
+            fontSize: 20, 
+            fontWeight: FontWeight.bold, 
+            letterSpacing: 3
+          ),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const PantallaPrincipal(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class PantallaPrincipal extends StatelessWidget {
+  const PantallaPrincipal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    // Lista de las 14 imágenes solicitadas
+    final List<String> imagenes = [
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero1.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero2.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero3.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero4.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero5.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero6.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche2.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche3.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche4.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche5.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche8.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche9.png',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche6.jfif',
+      'https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche7.jfif',
+    ];
+
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: const Text("FARMACIAS SIMILARES"),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+      body: GridView.builder(
+        padding: const EdgeInsets.all(12),
+        // 2 Columnas configuradas aquí
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.68, // Relación de aspecto para evitar desbordamiento
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
         ),
+        itemCount: imagenes.length,
+        itemBuilder: (context, index) {
+          return Card(
+            color: const Color(0xFF252733),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            elevation: 8,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Imagen uniforme
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
+                    child: Image.network(
+                      imagenes[index],
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                // Contenido de la tarjeta
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        index < 6 ? "Llavero Edición" : "Peluche Simi",
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),
+                      ),
+                      const Text(
+                        "Producto Oficial",
+                        style: TextStyle(fontSize: 12, color: Color(0xFF00E5FF)),
+                      ),
+                      const SizedBox(height: 6),
+                      // Fila de Estrellas
+                      Row(
+                        children: List.generate(5, (i) => const Icon(Icons.star, color: Colors.amber, size: 14)),
+                      ),
+                      const SizedBox(height: 8),
+                      // Botón de carrito llamativo
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text("\$120.00", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                          CircleAvatar(
+                            backgroundColor: const Color(0xFF00E5FF),
+                            radius: 16,
+                            child: IconButton(
+                              icon: const Icon(Icons.add_shopping_cart, size: 16, color: Colors.black),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
