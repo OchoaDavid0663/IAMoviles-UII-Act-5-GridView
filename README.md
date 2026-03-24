@@ -1,11 +1,56 @@
 # IAMoviles-UII-Act-5-GridView-2-X-7
 
-Hola, ¿me podrías ayudar con un código en Flutter para una tarea? Necesito hacer un GridView de 2 columnas por 7 filas (14 productos en total) para una app de 'Farmacias Similares'.
+Entendido, vamos a darle un toque más detallado y técnico, pero con ese lenguaje relajado de "estudiante que sabe lo que hace". Este prompt está diseñado para que la IA entienda perfectamente la estructura de las 2 columnas y las 7 filas sin que se pierda el diseño estético.
 
-El estilo visual debe ser oscuro con detalles en neón (Cyan), algo así como un tema Dark Mode moderno. Para cada tarjeta del grid, necesito que se vea la imagen del producto en la parte de arriba, y abajo tres filas con información: un título (nombre del producto), un subtítulo y una fila de estrellitas de calificación. También me gustaría que cada cuadro sea llamativo y tenga un botoncito redondo de carrito de compras en una esquina.
+Aquí tienes el prompt listo para copiar:
 
-Las imágenes las tengo en GitHub, son estas 14 (importante que todas se vean del mismo tamaño):
-[Aquí pegas la lista de tus 14 links de GitHub]
+"Hola, necesito apoyo para terminar una práctica en Flutter. El objetivo es crear una pantalla principal que use un GridView para mostrar el catálogo de souvenirs de 'Farmacias Similares'.
+
+Estas son las especificaciones clave:
+
+Estructura: El grid debe ser estrictamente de 2 columnas por 7 filas (para un total de 14 productos).
+
+Diseño Visual: Quiero un estilo Dark Mode llamativo. El fondo debe ser un gris casi negro (0xFF1A1A1D) y los detalles (como iconos o bordes) en un tono Cyan neón.
+
+Tarjetas (Cards): Cada celda del grid debe ser una tarjeta con bordes redondeados y sombra. Dentro de la tarjeta, la imagen debe ocupar la parte superior y debajo quiero tres secciones:
+
+Fila 1: Un título con el nombre del producto (en negritas).
+
+Fila 2: Un subtítulo descriptivo (ej. 'Producto Oficial').
+
+Fila 3: Una hilera de 5 estrellitas amarillas y, a un lado, un botón circular de color cyan con el icono de un carrito de compras.
+
+Imágenes: Todas deben tener el mismo tamaño y ajuste para que la cuadrícula se vea simétrica. Los links de GitHub son estos:
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero1.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero2.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero3.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero4.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero5.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Llavero6.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche2.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche3.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche4.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche5.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche8.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche9.png
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche6.jfif
+
+https://raw.githubusercontent.com/OchoaDavid0663/IAMoviles-UII-Act-5-GridView-2-X-7/refs/heads/main/Peluche7.jfif
+
+Ojo: No quiero TabBar ni menús extras, solo el Scaffold con su AppBar y el cuerpo con el GridView en un solo archivo main.dart. ¿Me podrías generar el código completo?"
 
 No necesito pestañas ni TabBar, solo el archivo main.dart con el Scaffold principal y el GridView que se vea limpio. ¿Me ayudas a armarlo?
 <img width="495" height="784" alt="image" src="https://github.com/user-attachments/assets/8076a78b-d503-4f70-b0f1-2305ccefffdf" />
